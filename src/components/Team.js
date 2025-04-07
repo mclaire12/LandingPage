@@ -30,19 +30,19 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-10 text-center">
-      <h2 className="mb-6 text-3xl font-bold text-purple-600">Meet Our Team</h2>
+    <section id="team" className="py-10 text-center bg-gray-50 dark:bg-gray-800">
+      <h2 className="mb-6 text-3xl font-bold text-purple-600 dark:text-purple-400">Meet Our Team</h2>
       <div className="flex justify-center gap-4">
         {members.map((member, index) => (
-          <div key={index} className="w-1/5 p-3 bg-white rounded-lg shadow-lg">
+          <div key={index} className="w-1/5 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-lg">
             <img
               src={member.image}
               alt={member.name}
               className="object-cover w-20 h-20 mx-auto rounded-full"
             />
-            <h3 className="mt-2 font-semibold text-md">{member.name}</h3>
-            <p className="text-sm text-gray-600">{member.role}</p>
-            <p className="mt-1 text-xs text-gray-500">{member.description}</p>
+            <h3 className="mt-2 font-semibold text-md dark:text-white">{member.name}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300">{member.role}</p>
+            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{member.description}</p>
           </div>
         ))}
       </div>

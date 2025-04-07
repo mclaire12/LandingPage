@@ -1,0 +1,146 @@
+.patient-flow-container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.flow-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.flow-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #4f46e5);
+  border-radius: 2px;
+}
+
+.flow-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.1);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  padding: 1.2rem;
+  border-radius: 50%;
+  min-width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.step-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.step-connector {
+  position: absolute;
+  left: 3.5rem;
+  bottom: -3rem;
+  width: 3px;
+  height: 3rem;
+  background: linear-gradient(to bottom, #2563eb, #4f46e5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-flow-container {
+    padding: 2rem 1rem;
+  }
+  
+  .flow-title {
+    font-size: 2rem;
+  }
+  
+  .flow-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .step-icon {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .step-connector {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .step-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .step-content p {
+    font-size: 1rem;
+  }
+} 
